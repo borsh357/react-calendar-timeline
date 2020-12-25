@@ -1,0 +1,25 @@
+.table-col {
+  display: inline-table;
+  white-space: nowrap;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: gainsboro;
+  border: 1px gray ridge;
+  box-sizing: border-box;
+
+  &.-month {
+    width: fit-content;
+    height: 20px;
+    .table-col-header {
+      font-weight: bold;
+      background: coral;
+    }
+  }
+
+  &.-filter {
+    background: coral;
+    width: 100px;
+    height: 60px;
+  }
+}
