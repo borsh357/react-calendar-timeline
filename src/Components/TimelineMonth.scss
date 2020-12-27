@@ -1,7 +1,6 @@
 .timeline-month {
   display: inline-table;
   white-space: nowrap;
-  border: 1px solid #8c8c8c;
   box-sizing: border-box;
   position: relative;
 
@@ -11,13 +10,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 400px);
     background: #fffec9;
     opacity: 0.2;
-  }
-
-  &:nth-child(even) {
-    background: chartreuse;
   }
 
   .timeline-month-header {

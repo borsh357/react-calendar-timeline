@@ -32,8 +32,8 @@ function gererateListOfMonthsElements(arrayOfMonths) {
 }
 
 function generateDaysOfMonth(month) {
-  const startOfMonth = moment().month(month).startOf('month');
-  const endOfMonth = moment().month(month).endOf('month');
+  const startOfMonth = moment(month).startOf('month');
+  const endOfMonth = moment(month).endOf('month');
   const arrayOfDays = [];
   for (let day = startOfMonth.date(); day <= endOfMonth.date(); day++) {
     arrayOfDays.push(startOfMonth.format('YYYY-MM-DD'));

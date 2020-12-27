@@ -1,13 +1,24 @@
 .timeline-row {
   display: flex;
+  width: fit-content;
+
+  &:nth-child(even) {
+    background: #ededed !important;
+  }
 
   .timeline-row-filter {
     width: 100px;
     position: fixed;
     z-index: 1;
-    background: tomato;
+    background: #fff;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8c8c8c;
+    box-sizing: border-box;
   }
+
   .timeline-row-cells {
     display: flex;
     margin-left: 100px;
@@ -19,6 +30,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
     }
+  }
+
+  .timeline-event {
+    background-color: lightblue;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 20px;
   }
 }

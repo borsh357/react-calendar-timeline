@@ -24,7 +24,23 @@ export default function Timeline() {
     <div className="timeline">
       <TimelineFilterHeader />
       <ListOfMonths data={listOfMonths} />
-      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[0] }} />
+      <TimelineRow
+        listOfMonths={listOfMonths}
+        data={{ filter: filters[0] }}
+        events={[
+          { from: '2020-12-01', to: '2020-12-08', text: 'something 1' },
+          { from: '2020-12-02', to: '2020-12-04', text: 'something 2' },
+        ]}
+      />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[1] }} />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[2] }} />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[3] }} />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[4] }} />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[5] }} />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[6] }} />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[7] }} />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[8] }} />
+      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[9] }} />
     </div>
   );
 }
@@ -37,13 +53,3 @@ function generateMonths(numberOfMonths) {
   }
   return arrayOfMonths;
 }
-
-// <Timeline>
-// <TimelineHeader data={[1, 2, 3, 4, 5, 6 , 7]} />
-// <TimelineRow
-//    events={[
-//      {from: '2020-12-01', to: '2020-12-08', event_name: 'something 1'},
-//      {from: '2020-12-02', to: '2020-12-04', event_name: 'something 2'},
-//    ]}
-// />
-// </Timeline>
