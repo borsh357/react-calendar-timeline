@@ -4,6 +4,8 @@ import moment from 'moment';
 import ListOfMonths from './ListOfMonths';
 import TimelineFilterHeader from './TimelineFilterHeader';
 import TimelineRow from './TimelineRow';
+import timeline from '../js/store';
+console.log(timeline);
 
 export default function Timeline() {
   const filters = [
@@ -28,13 +30,29 @@ export default function Timeline() {
         listOfMonths={listOfMonths}
         data={{ filter: filters[0] }}
         events={[
-          { from: '2020-12-01', to: '2020-12-08', text: 'something 1' },
-          { from: '2020-12-02', to: '2020-12-04', text: 'something 2' },
+          { from: '2020-12-01', to: '2020-12-08', text: 'I' },
+          { from: '2020-12-02', to: '2020-12-12', text: 'Am' },
+          { from: '2020-12-14', to: '2021-01-04', text: 'Sorry' },
         ]}
       />
-      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[1] }} />
-      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[2] }} />
-      <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[3] }} />
+      <TimelineRow
+        listOfMonths={listOfMonths}
+        data={{ filter: filters[1] }}
+        events={[
+          { from: '2020-12-03', to: '2020-12-06', text: 'For' },
+          { from: '2020-12-05', to: '2020-12-7', text: 'This' },
+        ]}
+      />
+      <TimelineRow
+        listOfMonths={listOfMonths}
+        data={{ filter: filters[2] }}
+        events={[{ from: '2020-12-09', to: '2020-12-16', text: 'Bad' }]}
+      />
+      <TimelineRow
+        listOfMonths={listOfMonths}
+        data={{ filter: filters[3] }}
+        events={[{ from: '2020-12-01', to: '2020-12-08', text: 'Code' }]}
+      />
       <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[4] }} />
       <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[5] }} />
       <TimelineRow listOfMonths={listOfMonths} data={{ filter: filters[6] }} />

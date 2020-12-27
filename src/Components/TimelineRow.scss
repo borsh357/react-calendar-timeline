@@ -1,17 +1,19 @@
 .timeline-row {
-  display: flex;
   width: fit-content;
+  position: relative;
+  min-height: 40px;
 
   &:nth-child(even) {
-    background: #ededed !important;
+    background: #ededed;
   }
 
   .timeline-row-filter {
     width: 100px;
+    min-height: 40px !important;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background: #fff;
-    height: 40px;
+    height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,9 +24,11 @@
   .timeline-row-cells {
     display: flex;
     margin-left: 100px;
+    height: inherit;
     .timeline-row-cell {
       width: 40px;
-      height: 40px;
+      min-height: 40px;
+      height: inherit;
       border: 1px darkgrey solid;
       box-sizing: border-box;
       display: flex;
@@ -34,12 +38,17 @@
     }
   }
 
-  .timeline-event {
-    background-color: lightblue;
+  .events {
     position: absolute;
+    top: 0;
     left: 0;
-    overflow: hidden;
-    height: 20px;
-    margin-bottom: 20px;
+    z-index: 1;
+    .timeline-event {
+      background-color: lightblue;
+      left: 0;
+      overflow: hidden;
+      height: 20px;
+      margin: 10px 0;
+    }
   }
 }
