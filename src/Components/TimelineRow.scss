@@ -1,0 +1,24 @@
+.timeline-row {
+  display: flex;
+
+  .timeline-row-filter {
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    background: tomato;
+    height: 40px;
+  }
+  .timeline-row-cells {
+    display: flex;
+    margin-left: 100px;
+    .timeline-row-cell {
+      width: 40px;
+      height: 40px;
+      border: 1px darkgrey solid;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

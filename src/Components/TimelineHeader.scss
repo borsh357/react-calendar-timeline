@@ -1,0 +1,19 @@
+.timeline-header {
+  display: flex;
+  background: #e0e0e0;
+
+  .timeline-header-cell {
+    width: 40px;
+    height: 40px;
+    border: 1px darkgrey solid;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.-current {
+      background: tomato;
+      color: #fff;
+    }
+  }
+}

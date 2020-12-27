@@ -1,19 +1,34 @@
-import { store } from '@risingstack/react-easy-state';
-import moment from 'moment';
+// import { store } from '@risingstack/react-easy-state';
+// import moment from 'moment';
 
-const time = store({
-  now: moment(),
-  month: null,
-  year: null,
-  startOfMonth: null,
-  endOfMonth: null,
-});
+// const timeline = store({
+//   now: moment(),
+//   listOfMonths: null,
+//   startOfMonth: null,
+//   endOfMonth: null,
+//   filters: [
+//     'Fred',
+//     'Albert',
+//     'Aline',
+//     'Mark',
+//     'Steve',
+//     'Bill',
+//     'Bob',
+//     'Andrew',
+//     'Alex',
+//     'Tom',
+//   ]
+// });
 
-time.month = time.now.format('MMMM');
-time.year = time.now.year();
-time.startOfMonth = moment(time.now).startOf('month');
-time.endOfMonth = moment(time.now).endOf('month');
+// timeline.listOfMonths = generateMonths(6);
 
 
-console.log(time.startOfMonth)
-export default time;
+// function generateMonths(numberOfMonths) {
+//   const arrayOfMonths = [timeline.now.format('MMMM YYYY')];
+//   for (let month = 1; month < numberOfMonths; month++) {
+//     let newMonth = timeline.now.add(month, 'M').format('MMMM YYYY');
+//     arrayOfMonths.push(newMonth);
+//   }
+//   return arrayOfMonths;
+// }
+// export default timeline;

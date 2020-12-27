@@ -1,12 +1,15 @@
-import React from 'react';
-import time from './store';
-import TableCol from '../Components/TableCol';
+// //import React from 'react';
+// import timeline from './store';
 
-
-export function genereteDayCols() {
-  const arrayOfDayColumnsElements = [];
-  for (let day = time.startOfMonth.date(); day <= time.endOfMonth.date(); day++) {
-    arrayOfDayColumnsElements.push(<TableCol type='day'><span>{day}</span></TableCol>);
-  }
-  return arrayOfDayColumnsElements;
-}
+// export function generateDaysOfMonth(month) {
+//   const startOfMonth = timeline.now.month(month).startOf('month');
+//   const endOfMonth = timeline.now.month(month).endOf('month');
+//   const arrayOfDays = [];
+//   console.log(startOfMonth);
+//   for (let day = startOfMonth.date(); day <= endOfMonth.date(); day++) {
+//     arrayOfDays.push(startOfMonth.format('YYYY-MM-DD'));
+//     startOfMonth.add(1, 'day');
+//   }
+//   return arrayOfDays;
+  
+// }
