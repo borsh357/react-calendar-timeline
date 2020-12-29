@@ -32,6 +32,17 @@ function App() {
         filterName: 'Mark',
         events: [{ from: '2020-12-01', to: '2020-12-08', text: 'Code' }],
       },
+      {
+        filterName: 'Alex',
+        events: [
+          { from: '2020-12-15', to: '2020-12-20', text: 'I' },
+          { from: '2020-12-16', to: '2020-12-21', text: 'Hope' },
+          { from: '2020-12-17', to: '2020-12-22', text: 'Now' },
+          { from: '2020-12-18', to: '2020-12-23', text: "It's" },
+          { from: '2020-12-19', to: '2020-12-24', text: 'Slightly' },
+          { from: '2020-12-20', to: '2020-12-25', text: 'Better' },
+        ],
+      },
     ],
   }
 
