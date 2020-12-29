@@ -1,11 +1,15 @@
+//prettier-ignore
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "react-app",
+        "prettier"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -15,8 +19,13 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
+        "jsx-quotes": [
+            1,
+            "prefer-double"
+          ]
     }
 };

@@ -1,52 +1,54 @@
-import React from 'react';
-import moment from 'moment';
-import PropTypes from 'prop-types';
-import './TimelineRow.scss';
-import timeline from '../js/store';
+import React from 'react'
+import moment from 'moment'
+import PropTypes from 'prop-types'
+import './TimelineRow.scss'
 
-export default function TimelineRow(props) {
-  const events = [];
-  if (props.events) {
-    props.events.forEach((event) => {
-      events.push(createEvent(event.from, event.to, event.text));
-    });
+export default function TimelineRow({ data, events, listOfDates, beginFrom }) {
+  const eventELements = []
+  if (events) {
+    events.forEach((event) => {
+      eventELements.push(
+        createEvent(event.from, event.to, event.text, beginFrom)
+      )
+    })
   }
 
-  const cellsElements = [];
-  timeline.listOfDates.forEach((date) => {
+  const cellsElements = []
+  listOfDates.forEach((date) => {
     cellsElements.push(
       <div className={'timeline-row-cell ' + date} key={date} />
-    );
-  });
+    )
+  })
 
   return (
     <div
       className="timeline-row"
       style={{ height: 40 + 30 * (events.length - 1) }}
     >
-      <div className="timeline-row-filter">{props.data.filter}</div>
+      <div className="timeline-row-filter">{data.filter}</div>
       <div className="timeline-row-cells">{cellsElements}</div>
-      <div className="events">{events}</div>
+      <div className="events">{eventELements}</div>
     </div>
-  );
+  )
 }
 
 TimelineRow.propTypes = {
   data: PropTypes.object.isRequired,
-  listOfMonths: PropTypes.array.isRequired,
+  listOfDates: PropTypes.array.isRequired,
   events: PropTypes.array,
-};
+  beginFrom: PropTypes.string,
+}
 
-function createEvent(from, to, text) {
-  const daysCount = Math.abs(moment(from).diff(moment(to), 'days')) + 1;
-  const beginFrom = Math.abs(moment(from).diff(timeline.beginFrom, 'days'));
+function createEvent(from, to, text, beginFrom) {
+  const daysCount = Math.abs(moment(from).diff(moment(to), 'days')) + 1
+  const startCell = Math.abs(moment(from).diff(beginFrom, 'days'))
   return (
     <div
       className="timeline-event"
       key={text}
-      style={{ width: 40 * daysCount, marginLeft: 100 + 40 * beginFrom }}
+      style={{ width: 40 * daysCount, marginLeft: 100 + 40 * startCell }}
     >
       {text}
     </div>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-React App template with eslint, propTypes and react-easy-state
+Курсовая работа: разработка компонента React Calendar Timeline
 
 ## Available Scripts
 
